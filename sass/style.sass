@@ -1,0 +1,1231 @@
+@import varibales
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Source+Sans+Pro:400,900&display=swap')
+@font-face
+  font-family: "Font Awesome"
+  src: url('../fonts/fontawesome-webfont.eot')
+  src: url('../fonts/fontawesome-webfont.eot?iefix') format('eot'),
+  url('../fonts/fontawesome-webfont.woff') format('woff'),
+  url('../fonts/fontawesome-webfont.ttf') format('truetype'),
+  url('../fonts/fontawesome-webfont.svg#webfont') format('svg')
+  font-weight: normal
+  font-style: normal
+*
+  box-sizing: border-box
+  padding: 0
+  margin: 0
+body
+  font-family: "Open Sans", sans-serif
+  overflow-x: hidden
+.h2p
+
+    & h2
+      font-size: 36px
+      text-align: center
+      font-family: "Source Sans Pro"
+      color: $grey
+      letter-spacing: 7px
+      margin-bottom: 30px
+    & p
+      text-align: center
+      font-size: 14px
+      color: #999
+      margin-bottom: 40px
+.header
+  position: relative
+  background: #3a3a3d url("../img/bghead.png") no-repeat  center / cover
+  width: 100vw
+  height: auto
+.headerWrapper
+  background: rgba(0,0,0, 0.67)
+  width: 100%
+  height: 990px
+.triangles
+  border-top: 123px solid transparent
+  border-right: 50vw solid #fff
+  border-left: 50vw solid #fff
+  border-bottom: 0 solid #fff
+  width: 0
+  height: 0
+  position: absolute
+  bottom: 0
+.headerNav
+  width: auto
+  height: 132px
+  padding-left: $basePadding
+  padding-right: $basePadding
+  display: flex
+  justify-content: space-between
+  align-items: center
+.navBar > a
+  font-size: 14px
+  display: inline-block
+  text-align: center
+  position: relative
+  text-decoration: none
+  color: $semiWhite
+  margin-left: 1vw
+  transition: .5s
+  &::after
+    position: absolute
+    bottom: -10px
+    left: 0
+    content: " "
+    width: 100%
+    height: 2px
+    background-color: $baseColor
+    transform: scaleX(0)
+    transition: .5s
+  &:hover::after
+    transition: .5s
+    transform: scaleX(1)
+  &:hover
+    transition: .5s
+    color: $baseColor
+.mainContentWrapper
+  padding-top: 100px
+  position: relative
+  width: 100%
+  height: 540px
+  display: flex
+  justify-content: center
+  align-items: center
+.btnSlaiderWrapper
+  transition: background-color .4s
+  border-radius: 4px
+  display: flex
+  justify-content: center
+  align-items: center
+  background-color: rgba(200, 200, 200, 0.6)
+  position: absolute
+  width: 45px
+  height: 45px
+  &.btnleft
+    left: 48px
+  &.btnright
+    right: 48px
+    transform: rotate(180deg)
+  &:hover
+    transition: background-color .4s
+    background-color: $baseColor
+    &>.btnImg
+      background: url("../img/arrowWhite.svg") no-repeat center / cover
+.btnImg
+  background: url("../img/arrow.svg") no-repeat center / cover
+  width: 15px
+  height: 20px
+
+.contentWrapper
+  width: 800px
+  height: 350px
+  overflow: hidden
+
+.contentSlaider
+  display: flex
+  width: 2400px
+.content
+  width: 800px
+  height: 350px
+
+.textWrapper
+  padding-top: 30px
+  width: inherit
+  height: inherit
+  text-align: center
+  color: $semiWhite
+  & h3
+    line-height: 24px
+    font-size: 24px
+    font-weight: 400
+    margin-bottom: 22.5px
+  & h2
+    line-height: 72px
+    font-size: 72px
+    font-weight: 700
+    letter-spacing: 8px
+  & p
+    line-height: 25px
+    margin: 0 auto
+    font-size: 14px
+    width: 700px
+
+.lineWrapper
+  display: flex
+  justify-content: center
+  align-items: center
+  width: inherit
+  height: 10px
+  margin: 22.5px 0
+
+.lineContent
+  width: 80px
+  height: 1px
+  background-color: #f1ebe7
+.greyLine
+    background-color: #999
+.redDot
+  margin: 0  14px
+  width: 7px
+  height: 7px
+  border-radius: 100%
+  background-color: $baseColor
+.btnMainWrapper
+  display: flex
+  justify-content: center
+  align-items: center
+.btnInfo
+  transition: all .5s
+  color: #fff
+  font-size: 14px
+  font-weight: 700
+  text-align: center
+  line-height: 50px
+  margin-right: 30px
+  background-color: transparent
+  border: 1px solid #f4f5f9
+  border-radius: 4px
+  width: 225px
+  height: 50px
+  user-select: none
+  &:hover
+    border: 1px solid $baseColor
+    background-color: $baseColor
+    transition: all .5s
+.anchorWrapper
+  position: absolute
+  bottom: -37px
+.anchor
+  background: url("../img/anchor.svg") no-repeat center / cover
+  width: 74px
+  height: 74px
+  margin-left: -37px
+.features
+  display: grid
+  grid-template-rows: 300px 1fr
+  grid-row-gap: 200px
+  padding: 70px 0 150px 0
+.featuresWrapper
+  margin: 0 auto
+  width: $baseWidth
+  display: grid
+  grid-template-columns: repeat(4, 1fr)
+  grid-template-rows: 1fr
+  justify-items: center
+  align-items: center
+.featuresItems
+  width: 250px
+  text-align: center
+  &:hover
+    & h3
+      color: $baseColor
+      transition: .8s
+
+    & .featuresImg::after
+      border: 1px solid $baseColor
+      transform: rotate(45deg)
+      transition: .8s
+  & h3
+    color: $grey
+    font-size: 18px
+    font-weight: 600
+.featuresImg
+  position: relative
+  justify-content: center
+  align-items: center
+  display: flex
+  width: 73px
+  height: 73px
+  margin: auto
+  margin-bottom: 30px
+  &::after
+    content: " "
+    position: absolute
+    width: 73px
+    height: 73px
+    border: 1px solid #e5e5e5
+    border-radius: 3px
+    transition: .8s
+  & img
+    height: 30px
+    width: 45px
+.lineFeatures
+  margin: 20px auto
+  width: 41px
+  height: 2px
+  & div:nth-child(1)
+    background-color: #888
+    height: 1px
+    width: inherit
+  & div:nth-child(2)
+    background-color: #e1e1e1
+    height: 1px
+    width: inherit
+.featuresText
+  color: #999
+  font-size: 12px
+.ourHistoryWrapper
+  margin: 0 auto
+  width: $baseWidth
+  display: grid
+  grid-template-columns: 1fr 1fr
+  grid-column-gap: 80px
+  font-family: "Source Sans Pro"
+  & p
+    font-size: 14px
+    color: #999
+    line-height: 29px
+    margin-bottom: 40px
+.btnRed
+  position: relative
+  background-color: $baseColor
+  color: #fff
+  font-size: 14px
+  font-weight: 700
+  text-align: center
+  line-height: 50px
+  border-radius: 4px
+  width: 225px
+  height: 50px
+  user-select: none
+  border:  none
+  overflow: hidden
+  &:hover
+    cursor: pointer
+.btnRedBlick
+  &::before
+    content: ""
+    top: 0
+    left: 0
+    width: 30px
+    height: 100%
+    background: #fff
+    opacity: .6
+    position: absolute
+    transform: translateX(-60px) skewX(-45deg)
+    transition: .4s
+  &:hover
+    &::before
+      animation: slide .9s
+@keyframes slide
+  0%
+    transform: translateX(-60px) skewX(-45deg)
+  100%
+    transform: translateX(300px) skewX(-45deg)
+
+.labelWrapper
+  display: flex
+  align-items: center
+  margin-bottom: 42px
+  & h2
+    color: $grey
+    letter-spacing: 7px
+    font-size: 36px
+.labelLine
+  margin-right: 30px
+  width: 6px
+  height: 36px
+  background-color: $baseColor
+.ourService
+  display: grid
+  grid-template-columns: 1fr 1fr
+.ourServiceWrapper
+  display: grid
+  grid-template-columns: 1fr 10fr
+  background: #202020
+.ourServiceBlock
+  text-align: right
+  padding: 100px 80px 100px 100px
+.serviceLabel
+  display: inline-flex
+  margin-bottom: 40px
+  align-items: flex-end
+  & h2
+    font-size: 36px
+    letter-spacing: 7px
+    font-family: "Source Sans Pro"
+    color: $semiWhite
+.lineServiceLabel
+  background-color: $baseColor
+  width: 6px
+  height: 36px
+  margin-left: 30px
+.ourServiceText
+  & h3
+    color: $baseColor
+    font-size: 18px
+    margin: 20px 0
+  & p
+    color: #999
+    font-size: 14px
+    line-height: 29px
+    letter-spacing: 1px
+    margin-bottom: 60px
+.ourServiceItem
+  position: relative
+.imgServices
+  position: absolute
+  right: -116px
+  top: 50%
+  margin-top: -36.5px
+
+.ourServiceMainImg
+  background: #402a25 url("../img/serviceBG.png") no-repeat center / cover
+.lineServiceWrapper
+    display: flex
+    justify-content: center
+    align-items: center
+.lineService
+  & div:nth-child(odd)
+    background-color: #3e3e3e
+    width: 1px
+    height: 34px
+  & div:nth-child(2)
+    background-color: $baseColor
+    width: 2px
+    height: 34px
+    margin: 11px auto
+.recentWorkTextWrapper
+  margin-top: 130px
+  text-align: center
+.navWorkWrapper
+  margin: 60px 0 40px 0
+  & span
+    font-size: 14px
+    color: #999
+.navWorkItem
+  margin: 0 15px
+  font-size: 14px
+  color: #999
+  display: inline-block
+.recentWorkWrapper
+  display: grid
+  grid-template-columns: repeat(4, 1fr)
+  grid-template-rows: 1fr 1fr
+.recentWorkItem
+  width: 100%
+  height: 23vw
+.recentWorkItemHoverText
+  opacity: 0
+  transition: .5s
+  position: absolute
+  width: 320px
+  height: 90px
+  color: #fff
+  bottom: 20px
+  left: 40px
+  & h3
+    font-size: 24px
+    font-family: "Source Sans Pro"
+    letter-spacing: 5px
+    margin-bottom: 10px
+  & p
+    font-size: 14px
+.workLine
+  background-color: #fff
+  width: 44px
+  height: 4px
+  margin-bottom: 12px
+.recentWorkItemHover
+  width: 100%
+  height: inherit
+  transition: .5s
+  position: relative
+  &:hover
+    background-color: $baseColor
+    opacity: .75
+    transition: .5s
+    & .recentWorkItemHoverText
+      opacity: 1
+      transition: .5s
+.caseStudy
+  background-color: $semiWhite
+  height: 1190px
+.caseStudyTextWrapper
+  text-align: center
+  padding-top: 150px
+.caseStudyContentWrapper
+  perspective: 1000px
+  position: relative
+  width: 665px
+  height: 629px
+  left: 50%
+  top: 110px
+  margin-left: -580px
+.caseStudyContent
+  z-index: 1
+  box-shadow: 0 0 7px $grey
+  background-color: #fff
+  overflow: hidden
+  width: 665px
+  height: 629px
+  position: relative
+.caseStudySlaider
+  display: flex
+  width: 1995px
+.caseStudyItem
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  padding-top: 80px
+  width: 665px
+  height: 500px
+  & h2
+    margin-top: 60px
+    font-size: 18px
+    color: $grey
+  & p
+    font-size: 14px
+    line-height: 24px
+    width: 520px
+    font-family: "Source Sans Pro"
+    color: #999
+    margin-bottom: 50px
+  &:hover .caseStudyItemImg::after
+    transition: .8s
+    transform: rotate(45deg)
+    background-color: $baseColor
+.caseStudyItemImg
+  position: relative
+  justify-content: center
+  align-items: center
+  display: flex
+  width: 65px
+  height: 65px
+  &::after
+    content: " "
+    top: 0
+    left: 0
+    position: absolute
+    width: 65px
+    height: 65px
+    border: 1px solid $baseColor
+    transition: .8s
+  & img
+    height: 30px
+    width: 45px
+.dotsSlaiderWrapper
+  z-index: 5
+  position: absolute
+  bottom: 50px
+  left: 50%
+  width: 60px
+  margin-left: -30px
+  display: flex
+  justify-content: center
+  align-items: center
+.dotSlaiderItem
+  margin: 0 4px
+  width: 12px
+  height: 12px
+  border-radius: 50px
+  transition: .8s
+  background-color: $semiWhite
+.redDotActive
+  transition: .8s
+  background-color: $baseColor
+.caseStudyBG
+  z-index: 0
+  position: absolute
+  right: -75%
+  top: -46px
+  background: #dbc6a8 url("../img/caseBG.png") no-repeat center / cover
+  width: 585px
+  height: 724px
+.statistics
+  background: #030301 url("../img/statisticsBG.png") no-repeat center / cover
+.statisticsWrapper
+  display: grid
+  grid-template-columns: repeat(5, 1fr)
+  justify-items: stretch
+  padding: 0 $basePadding
+.statisticsItem
+  color: $semiWhite
+  font-family: "Source Sans Pro"
+  padding: 120px 0
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  margin: 0 3%
+.labelStat
+  text-align: center
+  & h2
+    font-size: 30px
+    letter-spacing: 4px
+    margin: 40px 0 12px 0
+  & p
+    font-size: 15px
+    letter-spacing: 1.5px
+.rectStat
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 115px
+  height: 115px
+  border-radius: 115px
+  border: 1px solid #f7f7f7
+.pricingLabelWrapper
+  padding-top: 150px
+  text-align: center
+.pricingWrapper
+  width: $baseWidth
+  text-align: center
+  padding: 60px 0
+  margin: 0 auto
+  display: flex
+  justify-content: space-between
+  align-items: center
+.pricingItemLabel
+  position: relative
+  width: 330px
+  height: 205px
+  transition: .8s
+  background-color: #999
+  & h2
+    padding-top: 50px
+    color: #fff
+    font-size: 24px
+.pricingRectOut
+  display: flex
+  justify-content: center
+  align-items: center
+  position: absolute
+  bottom: -90px
+  left: 50%
+  margin-left: -90px
+  width: 180px
+  height: 180px
+  border-radius: 180px
+  background-color: rgba(244,245,249, 0.4)
+  z-index: 1
+.pricingRectIn
+  width: 155px
+  height: 155px
+  border-radius: 155px
+  background-color: #fff
+  z-index: 2
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  color: #999
+  transition: color 10.8s
+  font-family: "Source Sans Pro"
+  & h3
+    transition: .8s
+    font-size: 38px
+  & p
+    font-size: 14px
+.pricingItemInfo
+  padding-top: 120px
+  width: 330px
+  height: 403px
+  background-color: $semiWhite
+  & p
+    margin-bottom: 30px
+    color: #999
+    font-size: 14px
+.btnGrey
+  transition: .8s
+  width: 145px
+  height: 46px
+  background-color: #999
+  border-radius: 4px
+  margin: 0 auto
+  line-height: 46px
+  font-size: 12px
+  color: #fff
+  border: none
+  &:hover
+    cursor: pointer
+.pricingItem:hover
+  & .btnGrey
+    transition: .8s
+    background-color: $baseColor
+  & .pricingRectIn h3
+    transition: .8s
+    color: $baseColor
+  & .pricingItemLabel
+    transition: .8s
+    background-color: $baseColor
+.ourTeam
+  position: relative
+  background: #202020 url("../img/teamBG.svg") no-repeat center / cover
+  padding-top: 150px
+  width: auto
+  height: 744px
+.ourTeamLabel
+  & h2
+    color: #fff
+  & p
+    color: $semiWhite
+.shapeTeam
+  position: absolute
+  background: url("../img/shapeteamBG.svg") no-repeat bottom
+  width: 100%
+  height: 100%
+  bottom: 0
+.teamMembersWrapper
+  position: relative
+  width: 1170px
+  margin: 0 auto
+  & div:nth-child(1)
+    bottom: -275px
+    left: -6%
+  & div:nth-child(2)
+        bottom: -220px
+        left: 18%
+  & div:nth-child(3)
+        bottom: -208px
+        left: 40%
+  & div:nth-child(4)
+        bottom: -250px
+        left: 68%
+  & div:nth-child(5)
+        bottom: -190px
+        left: 93%
+.teamMember
+  transform-origin: center
+  transition: .4s
+  text-align: center
+  display: flex
+  justify-content: center
+  align-items: center
+  float: left
+  display: inline-block
+  z-index: 1
+  position: absolute
+  &:hover
+    & .teamMemberImg
+      transform: scale(1.2)
+      box-shadow: 0 0 15px black
+      &::after
+        top: -2px
+        background-color: $baseColor
+    & .teamMemberText
+      opacity: 1
+.teamMemberImg
+  margin: 0 auto
+  width: 57px
+  height: 57px
+  border-radius: 57px
+  border: 3px solid $baseColor
+  & img
+    width: 53px
+
+  &::after
+    content: ""
+    transition: background-color .4s
+    position: absolute
+    background-color: transparent
+    left: 50%
+    top: -1px
+    margin-left: -28.5px
+    width: inherit
+    height: inherit
+    border-radius: 57px
+    opacity: .6
+.teamMemberText
+  opacity: 0
+  transition: .6s
+  margin-top: 30px
+  & h2
+    color: $baseColor
+    font-size: 24px
+  & p
+    color: $semiWhite
+    font-size: 14px
+    font-family: "Source Sans Pro"
+.integrations
+  background-color: $semiWhite
+  padding: 150px 0
+.integrationsWrapper
+  width: $baseWidth
+  margin: 0 auto
+  margin-top: 60px
+  display: grid
+  grid-template-columns: repeat(5, 1fr)
+  grid-template-rows: 1fr 1fr
+  grid-gap: 30px
+  justify-items: center
+.integrationsItem
+  box-shadow: 1px 1px 5px #c1c2c5
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 210px
+  height: 100px
+  background-color: #fff
+  transition: 1s
+  border-radius: 2px
+  &:hover
+    background-color: #e74e3e
+  & img
+    width: 75%
+.blog
+  padding: 150px 0 0 0
+  background-color: $semiWhite
+.blogLabel
+  & h2
+    color: $grey
+  & p
+    color: #999
+.blogWrapper
+  margin-top: 60px
+  display: grid
+  grid-template-columns: 1fr 1fr
+  grid-template-rows: 1fr 1fr
+  justify-items: stretch
+.blogItem
+  position: relative
+  display: grid
+  justify-items: stretch
+  grid-template-columns: 1fr 1fr
+
+.blogItemBLock
+  width: 0
+  height: 0
+  position: absolute
+  top: 50%
+  left: 50%
+  margin: -70px 0 0 -39px
+  border-top: 70px solid transparent
+  border-right: 40px solid $baseColor
+  border-bottom: 70px solid transparent
+.blogBlockRotate
+  transform: rotate(180deg)
+  margin-left: 0
+.blogItemText
+  background-color: $baseColor
+  height: 25vw
+  color: #fff
+  display: flex
+  align-items: start
+  flex-direction: column
+  justify-content: flex-start
+  & p:nth-of-type(1)
+    font-size: 14px
+    padding: 5% 0 1% 5%
+  & h2
+    font-size: 24px
+    font-family: "Source Sans Pro"
+    padding: 3% 5%
+    letter-spacing: 4px
+  & p:nth-of-type(2)
+    font-size: 16px
+    padding: 1% 5%
+    line-height: 30px
+  & .workLine
+    margin-left: 5%
+.readMore
+  display: inline-block
+  text-decoration: none
+  color: #fff
+  font-size: 18px
+  font-style: italic
+  font-weight: 700
+  padding-left: 5%
+  margin-top: 3%
+.blogItemImg
+  height: 25vw
+.contact
+  padding: 150px 0
+  background-color: $semiWhite
+.contactWrapper
+  width: $baseWidth
+  margin: 0 auto
+  margin-top: 60px
+  display: grid
+  grid-template-columns: 1fr 1fr
+  grid-column-gap: 30px
+.contactStyles
+  height: 565px
+  border-radius: 3px
+  background-color: #fff
+  box-shadow: 1px 1px 5px #b8bbbc
+  display: grid
+  justify-content: center
+  align-items: center
+.contactAddressWrapper
+  width: 476px
+  justify-self: end
+  text-align: left
+  padding: 50px 0
+  & h2
+    color: $baseColor
+    letter-spacing: 3px
+    font-family: "Source Sans Pro"
+    font-size: 24px
+  & p
+    margin-top: -60px
+    color: #999
+    font-size: 14px
+.form
+  width: 665px
+  justify-self: start
+  padding: 40px 0
+  & label
+    text-align: left
+    font-size: 14px
+    color: #999
+    width: 430px
+  & input
+    margin-top: -20px
+    border: none
+    border-bottom: 1px solid #999
+    width: 430px
+.fromMessage
+  border: none
+  border-bottom: 1px solid #999
+  resize: none
+  width: 430px
+  margin-top: -20px
+.btnSuccess
+  margin: 0 auto
+    transform-origin: center
+  &:hover
+
+    transition: all .5s
+    transform: rotate(180deg)
+    border-radius: 100%
+    width: 50px
+    height: 50px
+    background-color: mediumseagreen
+.startNow
+  text-align: center
+  padding: 120px 0 90px 0
+  color: #fff
+  background: #121416 url("../img/startBG.png") no-repeat center / cover
+  & h2
+    font-weight: 400
+    font-size: 36px
+    letter-spacing: 4px
+  & p
+    font-size: 18px
+    margin: 15px 0 60px 0
+.footer
+  box-shadow: 0 0 10px #0a0a0a
+  background-color: #202020
+  padding: 0 $basePadding
+  display: flex
+  justify-content: space-between
+  height: 90px
+  align-items: center
+.linksWrapper
+  font-family: "Font Awesome"
+  & a
+
+    transition: .4s
+    text-decoration: none
+    margin-right: 10px
+    font-size: 18px
+    color: #999
+    &:hover
+      color: $baseColor
+.cpr
+  font-size: 14px
+  color: #999
+.up
+  text-align: center
+  line-height: 45px
+  color: #fff
+  font-family: "Font Awesome"
+  position: fixed
+  right: 50px
+  bottom: 60px
+  width: 50px
+  height: 50px
+  border-radius: 50px
+  background-color: $grey
+  font-size: 24px
+  &:hover
+    cursor: pointer
+    background-color: $baseColor
+@media screen and (max-width: 1700px)
+  .blogItemText
+    overflow-y: scroll
+    & p:nth-of-type(2)
+      font-size: 14px
+@media screen and (max-width: 1300px)
+  .headerNav
+    padding: 0 10vw
+  .statisticsWrapper
+    padding: 0 10vw
+  .footer
+    padding: 0 10vw
+  .teamMembersWrapper
+    width: 800px
+    & div:nth-child(1)
+      bottom: -227px
+      left: -6%
+    & div:nth-child(2)
+          bottom: -207px
+          left: 20%
+    & div:nth-child(3)
+          bottom: -208px
+          left: 40%
+    & div:nth-child(4)
+          bottom: -240px
+          left: 65%
+    & div:nth-child(5)
+          bottom: -240px
+          left: 87%
+@media screen and (max-width: 1250px)
+  .features
+    grid-template-rows: 1fr 1fr
+  .featuresWrapper
+    width: 800px
+    grid-template-columns: 1fr 1fr
+    grid-template-rows: 1fr 1fr
+    grid-row-gap: 60px
+    margin: 0 auto
+  .ourHistoryWrapper
+    width: 900px
+    grid-column-gap: 20px
+  .monitorImg
+    & img
+      width: 100%
+  .labelWrapper
+    margin-bottom: 20px
+  .ourService
+    grid-template-columns: 3fr 2fr
+  .recentWorkWrapper
+    grid-template-columns: 1fr 1fr
+  .recentWorkItem
+    height: 40vw
+  .caseStudyContentWrapper
+    margin-left: -430px
+  .caseStudyBG
+    right: -30%
+  .integrationsWrapper
+    width: 800px
+    grid-template-columns: repeat(3, 1fr)
+    & div:nth-child(10)
+      grid-column: 2/3
+  .blogWrapper
+    grid-template-columns: 1fr
+  .blogItemImg, .blogItemText
+    height: 40vw
+  .contactWrapper
+    grid-template-columns: 1fr
+    width: 800px
+    grid-row-gap: 20px
+  .contactStyles
+    justify-self: center
+    width: 665px
+  .pricingWrapper
+    width: 97%
+@media screen and (max-width: 1050px)
+  .pricingWrapper
+    flex-direction: column
+  .pricingItem
+    margin-bottom: 20px
+  .contentWrapper
+    width: 600px
+  .contentSlaider
+    width: 1800px
+  .content
+    width: 600px
+  .textWrapper
+    &  h2
+      font-size: 48px
+    & p
+      width: 500px
+      font-size: 12px
+@media screen and (max-width: 870px)
+  .btnSlaiderWrapper
+    display: none
+  .featuresWrapper
+    width: 300px
+    grid-template-columns: 1fr
+    grid-template-rows: repeat(4, 1fr)
+    grid-row-gap: 60px
+    margin: 0 auto
+  .ourHistoryWrapper
+    width: 90%
+    grid-template-columns: 1fr
+    & button
+      left: 50%
+      margin-left: -125px
+  .monitorImg
+    & img
+      width: 100%
+  .labelWrapper
+    margin-bottom: 20px
+  .ourService
+    grid-template-columns: 6fr 2fr
+  .caseStudyContentWrapper
+    margin-left: -290px
+  .caseStudyBG
+    right: 12%
+    width: 450px
+  .caseStudyContent
+    width: 500px
+  .caseStudyItem
+    width: 500px
+    & p
+      width: 470px
+  .dotsSlaiderWrapper
+    left: 37.81%
+  .statisticsWrapper
+    padding: 0 2vw
+    grid-template-columns: 1fr 1fr 1fr
+    grid-template-rows: 300px 400px
+    align-items: flex-start
+    & div:nth-child(4)
+      grid-column: 1/2
+      justify-self: end
+    & div:nth-child(5)
+      grid-column: 3/4
+      justify-self: start
+  .integrationsWrapper
+    width: 800px
+    grid-template-columns: repeat(3, 1fr)
+    & div:nth-child(10)
+      grid-column: 2/3
+  .teamMembersWrapper
+    width: 500px
+    & div:nth-child(1)
+      bottom: -207px
+      left: -6%
+    & div:nth-child(2)
+          bottom: -203px
+          left: 16%
+    & div:nth-child(3)
+          bottom: -210px
+          left: 33%
+    & div:nth-child(4)
+          bottom: -223px
+          left: 56%
+    & div:nth-child(5)
+          bottom: -243px
+          left: 76%
+  .integrationsWrapper
+    width: 500px
+    grid-template-columns: repeat(2, 1fr)
+  .contactWrapper
+    width: 500px
+  .contactStyles
+    justify-self: center
+    width: 480px
+  .footer
+    padding: 0 3vw
+@media screen and (max-width:700px)
+  .blogItem
+    grid-template-columns: 1fr
+  .blogItemImg
+    height: 80vw
+  .blogItemBLock
+    display: none
+  .blogItemText
+    height: 80vw
+@media screen and (max-width:630px)
+  .caseStudyContentWrapper
+    margin-left: -248px
+  .caseStudyBG
+    right: 25%
+    width: 400px
+  .caseStudyContent
+    width: 400px
+  .caseStudyItem
+    width: 400px
+    & p
+      width: 370px
+  .dotsSlaiderWrapper
+    left: 30.312%
+  .caseStudyItem
+    & h2
+      margin-top: 20px
+  .recentWorkWrapper
+    grid-template-columns: 1fr
+  .recentWorkItem
+    height: 70vw
+  .contentWrapper
+    width: 310px
+  .contentSlaider
+    width: 960px
+  .content
+    width: 320px
+  .textWrapper
+    & h3
+      font-size: 18px
+      margin-bottom: 0
+    &  h2
+      font-size: 28px
+      letter-spacing: 2px
+    & p
+      width: 310px
+      font-size: 11px
+  .btnInfo
+    font-size: 12px
+    height: 40px
+    line-height: 40px
+    width: 160px
+    margin: 0 5px
+@media screen and (max-width:520px)
+  .caseStudyContentWrapper
+    margin-left: -160px
+  .caseStudyBG
+    right: 50%
+    width: 320px
+  .caseStudyContent
+    width: 320px
+  .caseStudyItem
+    width: 320px
+    & p
+      width: 300px
+      font-size: 12px
+  .dotsSlaiderWrapper
+    left: 24.312%
+  .caseStudyItem
+    & h2
+      margin-top: 20px
+  .statisticsWrapper
+    grid-template-columns: 1fr
+    grid-template-rows: repeat(5,300px)
+    align-items: center
+    & div:nth-child(4)
+      grid-column: 1
+      justify-self: center
+    & div:nth-child(5)
+      grid-column: 1
+      justify-self: center
+  .teamMembersWrapper
+    width: 300px
+    & h2
+      font-size: 15px
+    & p
+      font-size: 12px
+    & div:nth-child(1)
+      bottom: -170px
+      left: -2%
+    & div:nth-child(2)
+          bottom: -172px
+          left: 19%
+    & div:nth-child(3)
+          bottom: -173px
+          left: 35%
+    & div:nth-child(4)
+          bottom: -182px
+          left: 57%
+    & div:nth-child(5)
+          bottom: -192px
+          left: 74%
+  .integrationsWrapper
+    width: 300px
+    grid-template-columns: 1fr
+    & div:nth-child(10)
+      grid-column: 1
+  .contactWrapper
+    width: 310px
+  .contactStyles
+    width: 310px
+  .contactAddressWrapper
+    padding: 0 15px
+  .form
+    & label
+      width: 290px
+    & input
+      width: 290px
+  .fromMessage
+    width: 290px
