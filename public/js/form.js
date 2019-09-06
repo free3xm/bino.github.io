@@ -14,7 +14,7 @@ btnForm.onclick = function(){
 form.onsubmit = () => formSubmit(event);
 function formSubmit(event){
   event.preventDefault();
-  fetch("https://free3xmbino.herokuapp.com/", {
+  fetch("https://binoapp.herokuapp.com/", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
