@@ -30,7 +30,7 @@ app.post("/", (req,res) => {
       return console.log(error,1);
     }
   });
-  res.end()
+  res.end(res)
 });
 app.listen(port, (err) => {
   if(err){
