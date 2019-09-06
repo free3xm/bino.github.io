@@ -16,7 +16,7 @@ app.post("/", (req,res) => {
     port: 466,
     auth: {
       user: "free3test@gmail.com",
-      pass: "free30974836904"
+      pass: "****""
     }
   });
   transporter.sendMail({
