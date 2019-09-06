@@ -14,7 +14,7 @@ btnForm.onclick = function(){
 form.onsubmit = () => formSubmit(event);
 function formSubmit(event){
   event.preventDefault();
-  fetch("https://binoapp.herokuapp.com/", {
+  fetch("http://localhost:3002", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
@@ -25,7 +25,8 @@ function formSubmit(event){
       subject: this.subject.value,
       text: this.message.value })
   }).then(function(response){
-    console.log( response.json())
+    if(response.ok) return response
+    return false
   }).then(function(data){
     btnForm.classList.add("btnSuccess");
     btnForm.innerHTML ="";
